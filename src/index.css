@@ -1,0 +1,95 @@
+/* Fonts (Space Grotesk + Playfair Display) are loaded via <link> in index.html */
+@import "tailwindcss";
+
+/* Brand tokens — sampled from the Rexise logo artwork */
+:root {
+  /* Core brand */
+  --navy: #22304b;
+  --navy-700: #1a2539;
+  --navy-600: #2c3d5e;
+  --gold: #c47a1f;
+  --gold-light: #e0a24f;
+  --gold-text: #8f5710; /* AA-contrast gold for text on light backgrounds */
+  --cream: #f2ede5;
+  --cream-200: #e9e2d6;
+  --cream-300: #ddd4c4;
+  --white: #fffdf9;
+
+  /* Semantic */
+  --bg: var(--cream);
+  --surface: var(--white);
+  --text: #1c2638;
+  --text-muted: #55607a;
+  --border: rgba(34, 48, 75, 0.14);
+
+  --font-sans: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  --radius-sm: 10px;
+  --radius: 18px;
+  --radius-lg: 28px;
+  --shadow-sm: 0 1px 2px rgba(34, 48, 75, 0.06), 0 4px 12px rgba(34, 48, 75, 0.05);
+  --shadow: 0 20px 50px -20px rgba(34, 48, 75, 0.25);
+  --header-h: 76px;
+
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
