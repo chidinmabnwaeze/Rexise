@@ -381,7 +381,8 @@ h3 {
   box-shadow: var(--shadow-sm);
   transition:
     transform 0.25s ease,
-    box-shadow 0.25s ease;
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
 }
 
 .feature-card:hover {
@@ -396,7 +397,7 @@ h3 {
 }
 
 .feature-card-outline:hover {
-  background: var(--surface);
+  background: #f8f5ef;
 }
 
 .feature-icon {
